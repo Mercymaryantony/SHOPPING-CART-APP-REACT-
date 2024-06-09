@@ -16,6 +16,7 @@ const Navbar = () => {
                             <Link className="nav-link" to="/s">SEARCH</Link>
                             <Link className="nav-link" to="/d">DELETE</Link>
                             <Link className="nav-link" to="/v">VIEW</Link>
+                            <Link className="nav-link" to="/vs">DYNAMIC VIEW</Link>
                         </div>
                     </div>
                 </div>

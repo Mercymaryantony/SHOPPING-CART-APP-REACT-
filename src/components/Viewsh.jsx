@@ -1,24 +1,26 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 const Viewsh = () => {
-    const [data,changedata]=useState(
+    const [data, changedata] = useState(
         {
-            "products":[]
+            "products": []
         }
     )
-    const fetchdata = () =>{
+    const fetchdata = () => {
         axios.get("https://dummyjson.com/products").then(
-            (response) =>
-                {
-                    changedata(response.data)
-                }
+            (response) => {
+                changedata(response.data)
+            }
         ).catch().finally()
     }
-    useEffect(()=>{fetchdata()},[])
+    useEffect(() => { fetchdata() }, [])
 
-  return (
+    return (
+    
     <div>
+        <Navbar/>
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12">
@@ -47,7 +49,7 @@ const Viewsh = () => {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default Viewsh

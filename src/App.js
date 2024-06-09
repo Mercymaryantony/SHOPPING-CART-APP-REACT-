@@ -10,7 +10,15 @@ import Viewsh from './components/Viewsh';
 function App() {
   return (
     <div >
-     <Viewsh/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Add/>}/>
+        <Route path='/s' element={<Search/>}/>
+        <Route path='/d' element={<Delete/>}/>
+        <Route path='/v' element={<View/>}/>
+        <Route path='/vs' element={<Viewsh/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
